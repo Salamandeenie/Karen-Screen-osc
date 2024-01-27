@@ -1,8 +1,14 @@
-# A Oscilloscope used for Spongebob: The Musical!
-A simple Oscilloscope with some added functionality to display images over it. 
-<br>
-Used in the CCS Spongebob Musical.
-<br>
-<a href="link.link">Click here to go to the live page</a>
-<br>
-Thank you theanam for your hand in this project, as it is like 90% your code.
+# Webscilloscope
+
+A simple, oscilloscope-like realtime sound visualizer.
+forked from https://github.com/mdn/web-dictaphone
+
+added
+* adjustable "speed" on the x-axis
+* double buffering
+* larger display
+
+![Screenshot](screenshot.png)
+
+## Installation
+Clone this repo and open index.html in the browser.
