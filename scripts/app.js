@@ -5,6 +5,8 @@ const soundClips = document.querySelector('.sound-clips');
 const canvas = document.querySelector('.visualizer');
 const mainSection = document.querySelector('.main-controls');
 
+var isPaused = false;
+
 var x = 0
 var fac = 1.0
 
@@ -70,11 +72,15 @@ function visualize(stream) {
   source.connect(analyser);
 
   draw();
-  offcanvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
   offcanvasCtx.beginPath();
   offcanvasCtx.moveTo(0, canvas.height / 2);
 
   function draw() {
+    if (isPaused) {
+      requestAnimationFrame(draw);
+      return;
+    }
+
     const WIDTH = canvas.width;
     const HEIGHT = canvas.height;
 
