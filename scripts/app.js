@@ -19,7 +19,7 @@ let audioCtx;
 const canvasCtx = canvas.getContext("2d");
 canvasCtx.strokeStyle = 'rgb(255, 255, 255)';
 canvasCtx.setLineDash([5, 5]);
-canvasCtx.lineWidth = 2;
+canvasCtx.lineWidth = 20;
 
 var offcanvas = document.createElement('canvas');
 offcanvas.id = "OffCanvas";
