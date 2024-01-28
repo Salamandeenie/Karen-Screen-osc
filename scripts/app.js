@@ -28,7 +28,7 @@ offcanvas.height = canvas.height
 const offcanvasCtx = offcanvas.getContext("2d");
 offcanvasCtx.fillStyle = 'rgb(0, 64, 0)';
 offcanvasCtx.strokeStyle = 'rgb(0, 255, 0)';
-offcanvasCtx.lineWidth = 2;
+offcanvasCtx.lineWidth = 20;
 
 // main block for doing the audio recording
 
