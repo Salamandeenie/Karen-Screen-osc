@@ -6,7 +6,72 @@
     <title>Webscilloscope</title>
     <link href="styles/app.css" rel="stylesheet" type="text/css">
   </head>
+  <style>
+    .site-header,.site-nav-main,.post-full-byline,.post-full-social,.contact-form,.read-next {
+    display:none;
+    }
+    #site-main,body,.site-wrapper {
+    display:block;
+    background: repeating-linear-gradient(to bottom,#332600,#332600 4px,#060114 4px,#060114 8px);
+    width:100%;
+    height:100%;
+    min-height:200%;
+    }
+    
+    .post-full-title {
+    color: #0000ff;
+    }
+    
+    .post-full-content,.site-footer {
+    background: none;
+    }
+    
+    @keyframes refresh{0%{bottom:100%}70%{bottom:100%}100%{bottom:0px}}
+    .refresh {
+    float: left;
+    width: 200%;
+    height: 100px;
+    z-index: 8;
+    background: linear-gradient(0deg,rgba(0,0,0,0) 0,rgba(255,255,255,.4) 10%,rgba(0,0,0,.1) 100%);
+    opacity: .1;
+    position: fixed;
+    bottom: 0;
+    animation: refresh 8s linear infinite;
+    animation-name: refresh;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    }
+    
+    @keyframes flicker{
+    0%{opacity:0.75}
+    20%{opacity: 0.20}
+    40%{opacity: 0.75}
+    100%{opacity:1}
+    }
+    
+    .cligno {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    background: repeating-linear-gradient(90deg,rgba(255,0,0,0.08) 0px 1px,rgba(0,255,0,0.08) 1px 2px ,rgba(0,0,255,0.08) 2px 3px),repeating-linear-gradient(0deg,transparent 0px 1px, rgba(0,0,0,0.4) 1px 2px);
+    opacity:0;
+    pointer-events:none;
+    animation:flicker 0.15s infinite;
+    }
+    
+    </style> 
   <body>
+    
+<div class="refresh" style="z-index: 1000"></div>
+<div class="cligno" style="z-index: 1000"></div> 
     <image id="overlay" style="position: fixed; z-index: 2; height: 105vh; width: 100%">
       <section class="main-controls">
         <canvas class="visualizer" height="1100vh" width="1000vw"></canvas>
