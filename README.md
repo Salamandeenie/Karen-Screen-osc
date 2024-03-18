@@ -12,3 +12,5 @@ added
 
 ## Installation
 Clone this repo and open index.html in the browser.
+
+<a href="https://drive.google.com/file/d/139Rfgm-IZ_tfJ1gVHrIccD0ewMl_IY_t/view?usp=sharing">GDrive Download</a>
